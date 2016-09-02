@@ -1,51 +1,35 @@
 {
-  "_args": [
-    [
-      "@ngrx/store",
-      "/Users/qdouble/Sites/MAIN_PROJECT/offersystem-api"
-    ]
+  "name": "qdouble-store",
+  "version": "2.1.2",
+  "description": "RxJS powered Redux for Angular2 apps",
+  "main": "./index.js",
+  "scripts": {
+    "clean": "rimraf node_modules typings dist tmp npm-debug.log && npm cache clean",
+    "clean:test": "rimraf tmp",
+    "clean:dist": "rimraf dist",
+    "build:dist": "npm run clean:dist && ngc && cp package.json dist/package.json",
+    "lint": "tslint src/**.ts",
+    "test": "tsc -p spec && jasmine && npm run clean:test",
+    "test:ngc": "ngc -p spec/tsconfig.ngc.json",
+    "typings": "typings install",
+    "prebuild:dist": "npm run typings",
+    "prepublish:dist": "npm run build:dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qdouble/ngrx-store.git"
+  },
+  "keywords": [
+    "RxJS",
+    "Angular2",
+    "Redux"
   ],
-  "_from": "@ngrx/store@latest",
-  "_id": "@ngrx/store@2.1.2",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/@ngrx/store",
-  "_nodeVersion": "6.3.1",
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/store-2.1.2.tgz_1471241982040_0.9085004378575832"
-  },
-  "_npmUser": {
-    "email": "rob.wormald@innitapps.com",
-    "name": "robwormald"
-  },
-  "_npmVersion": "3.10.3",
-  "_phantomChildren": {},
-  "_requested": {
-    "name": "@ngrx/store",
-    "raw": "@ngrx/store",
-    "rawSpec": "",
-    "scope": "@ngrx",
-    "spec": "latest",
-    "type": "tag"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/@ngrx/store/-/store-2.1.2.tgz",
-  "_shasum": "68764bc87dc540fb3133abba87b168617e7906ba",
-  "_shrinkwrap": null,
-  "_spec": "@ngrx/store",
-  "_where": "/Users/qdouble/Sites/MAIN_PROJECT/offersystem-api",
-  "author": {
-    "email": "robwormald@gmail.com",
-    "name": "Rob Wormald"
-  },
+  "author": "Rob Wormald <robwormald@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ngrx/store/issues"
   },
-  "dependencies": {},
-  "description": "RxJS powered Redux for Angular2 apps",
+  "homepage": "https://github.com/ngrx/store#readme",
   "devDependencies": {
     "@angular/common": "^2.0.0-rc.5",
     "@angular/compiler": "^2.0.0-rc.5",
@@ -71,53 +55,10 @@
     "typings": "^0.8.1",
     "zone.js": "^0.6.12"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "68764bc87dc540fb3133abba87b168617e7906ba",
-    "tarball": "https://registry.npmjs.org/@ngrx/store/-/store-2.1.2.tgz"
-  },
-  "homepage": "https://github.com/ngrx/store#readme",
-  "keywords": [
-    "Angular2",
-    "Redux",
-    "RxJS"
-  ],
-  "license": "MIT",
-  "main": "./index.js",
-  "maintainers": [
-    {
-      "name": "ngrxadmin",
-      "email": "robwormald@gmail.com"
-    },
-    {
-      "name": "robwormald",
-      "email": "rob.wormald@innitapps.com"
-    }
-  ],
-  "name": "@ngrx/store",
-  "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "^2.0.0-rc.5",
     "@ngrx/core": "^1.0.0",
-    "rxjs": "^5.0.0-beta.6"
+    "rxjs": "^5.0.0-beta.6",
+    "@angular/core": "^2.0.0-rc.5"
   },
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ngrx/store.git"
-  },
-  "scripts": {
-    "build:dist": "npm run clean:dist && ngc && cp package.json dist/package.json",
-    "clean": "rimraf node_modules typings dist tmp npm-debug.log && npm cache clean",
-    "clean:dist": "rimraf dist",
-    "clean:test": "rimraf tmp",
-    "lint": "tslint src/**.ts",
-    "prebuild:dist": "npm run typings",
-    "prepublish:dist": "npm run build:dist",
-    "test": "tsc -p spec && jasmine && npm run clean:test",
-    "test:ngc": "ngc -p spec/tsconfig.ngc.json",
-    "typings": "typings install"
-  },
-  "typings": "./index.d.ts",
-  "version": "2.1.2"
+  "typings": "./index.d.ts"
 }
