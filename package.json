@@ -1,0 +1,81 @@
+{
+  "author": {
+    "email": "robwormald@gmail.com",
+    "name": "Rob Wormald"
+  },
+  "bugs": {
+    "url": "https://github.com/ngrx/store/issues"
+  },
+  "dependencies": {},
+  "description": "RxJS powered Redux for Angular2 apps",
+  "devDependencies": {
+    "@angular/common": "^2.0.0-rc.5",
+    "@angular/compiler": "^2.0.0-rc.5",
+    "@angular/compiler-cli": "^0.5.0",
+    "@angular/core": "^2.0.0-rc.5",
+    "@angular/platform-browser": "^2.0.0-rc.5",
+    "@angular/platform-server": "^2.0.0-rc.5",
+    "@angular/tsc-wrapped": "^0.2.2",
+    "@ngrx/core": "^1.0.0",
+    "@types/jasmine": "^2.2.31",
+    "@types/node": "^6.0.33",
+    "core-js": "^2.4.1",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.35.0",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "lodash": "^3.10.1",
+    "reflect-metadata": "0.1.2",
+    "rimraf": "^2.5.2",
+    "rxjs": "5.0.0-beta.6",
+    "tslint": "^3.4.0",
+    "typescript": "next",
+    "typings": "^0.8.1",
+    "zone.js": "^0.6.12"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "769ac80264dbaea922a32441f81cd14b3fba9004",
+    "tarball": "https://registry.npmjs.org/qdouble-store/-/qdouble-store-2.1.2.tgz"
+  },
+  "homepage": "https://github.com/ngrx/store#readme",
+  "keywords": [
+    "Angular2",
+    "Redux",
+    "RxJS"
+  ],
+  "license": "MIT",
+  "main": "./index.js",
+  "maintainers": [
+    {
+      "name": "qdouble",
+      "email": "qdouble@gmail.com"
+    }
+  ],
+  "name": "qdouble-store",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular/core": "^2.0.0-rc.5",
+    "@ngrx/core": "^1.0.0",
+    "rxjs": "^5.0.0-beta.6"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngrx/store.git"
+  },
+  "scripts": {
+    "build:dist": "npm run clean:dist && ngc && cp package.json dist/package.json",
+    "clean": "rimraf node_modules typings dist tmp npm-debug.log && npm cache clean",
+    "clean:dist": "rimraf dist",
+    "clean:test": "rimraf tmp",
+    "lint": "tslint src/**.ts",
+    "prebuild:dist": "npm run typings",
+    "prepublish:dist": "npm run build:dist",
+    "test": "tsc -p spec && jasmine && npm run clean:test",
+    "test:ngc": "ngc -p spec/tsconfig.ngc.json",
+    "typings": "typings install"
+  },
+  "typings": "./index.d.ts",
+  "version": "2.1.2"
+}
